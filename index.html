@@ -34,7 +34,7 @@ body {
 
 <script>
 // ⏰ MODIFIE CETTE DATE ET HEURE
-const dateCible = new Date("2025-12-23T11:03:00").getTime();
+const dateCible = new Date("2025-12-23T11:06:00").getTime();
 
 const timer = setInterval(() => {
     const maintenant = new Date().getTime();
@@ -47,12 +47,13 @@ const timer = setInterval(() => {
         return;
     }
 
+    const jours = Math.floor(distance / (1000 * 60 * 60 * 24));
     const heures = Math.floor((distance / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((distance / (1000 * 60)) % 60);
     const secondes = Math.floor((distance / 1000) % 60);
 
-    document.getElementById("countdown").innerHTML =
-        heures + "h " + minutes + "m " + secondes + "s";
+document.getElementById("countdown").innerHTML =
+    jours + "j " + heures + "h " + minutes + "m " + secondes + "s";
 }, 1000);
 </script>
 
