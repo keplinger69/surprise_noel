@@ -2,24 +2,69 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Surprise 🎁</title>
 <style>
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #fffaf0;
+    color: #222;
 }
+
+.container {
+    max-width: 480px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+#countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
 #adresse {
     display: none;
-    font-size: 24px;
-    margin-top: 30px;
+    font-size: 1.2rem;
+    margin-top: 20px;
     color: #8b0000;
+}
+
+.bouton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: #8b0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+.bouton:active {
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 </style>
 </head>
 
 <body>
+<div class="container">
 
 <h1>🎄 Surprise de Noël 🎄</h1>
 <P>Réservez votre soirée du 7 février 2026</P>
@@ -32,13 +77,11 @@ body {
 📍 <strong>Restaurant LES CERCLES </strong><br>
 5 Le Pont de Pierre<br>
 44360 Vigneux-de-Bretagne
-</div>
-
-    <div id="reservation" style="display:none; margin-top:30px;">
-    <p>🔐 Bon de réservation</p>
-    <a href="reservation.pdf" target="_blank">
-    👉 Ouvrir la réservation
-</a>
+<div id="reservation" style="display:none;">
+    <p>🔐 Document de réservation</p>
+    <a href="files/reservation.pdf" target="_blank" class="bouton">
+        📄 Ouvrir la réservation
+    </a>
 </div>
     
 <script>
@@ -67,5 +110,6 @@ document.getElementById("countdown").innerHTML =
 }, 1000);
 </script>
 
+</div>
 </body>
 </html>
